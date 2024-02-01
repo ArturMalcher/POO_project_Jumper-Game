@@ -1,6 +1,6 @@
 from typing import Tuple, Dict
 
-# TUDO QUE APARECE NA TELA
+# TUDO QUE APARECE NA TELA / CENARIO
 class Screen:
     
     # Construtor
@@ -61,7 +61,7 @@ class Screen:
                     print(x, end='')
             print()
 
-         # Imprimindo o Array pelo dicionário
+        # Imprimindo o Array pelo dicionário
         #for y in array:
             # Caso não tenha nada dentro de um px, então mostra o Background
 
@@ -132,6 +132,8 @@ enemy3 = Sprite("enemy3", 1, 2, (138, 2), "#")
 enemy4 = Sprite("enemy4", 1, 2, (138, 2), "#")
 enemy5 = Sprite("enemy5", 1, 2, (138, 2), "#")
 enemy6 = Sprite("enemy6", 1, 2, (138, 2), "#")
+
+# TESTE
 
 # Adicionando objetos à screen1
 screen1.add_sprite(ground) 

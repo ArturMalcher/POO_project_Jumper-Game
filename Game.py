@@ -1,7 +1,6 @@
 import modules
 import classes
-import threading
-
+import time
 
 # Criando uma Tela
 screen1 = classes.Screen("screen1", 140, 10, " ")
@@ -10,6 +9,7 @@ screen1 = classes.Screen("screen1", 140, 10, " ")
 ground = classes.Sprite("ground", 140, 1, (1, 1), "_")
 player = classes.Sprite("player", 3, 2, (2, 2), "$")
 
+# Desenhando sprite
 player_corpo = {1:{1:"%", 2:"%", 3:">"},
                 2:{1:"!", 2:"!", 3:" "}}
 
@@ -27,26 +27,16 @@ enemy6 = classes.Sprite("enemy6", 1, 2, (138, 2), "#")
 # Adicionando Sprites na tela
 screen1.add_sprite(ground) 
 screen1.add_sprite(player)
-timer = 0.02
 score = 0
-frame = 0
-thread_lock = threading.Lock()
+timer = 0.03
 
-
-     
 while modules.running:
-        
-        
+    
     # Esperar resposta
-    with thread_lock:
-        thread_input = threading.Thread(target=modules.run, args=(screen1, player))
-        thread_input.start()
-        thread_input.join(timeout=timer)
-        if not thread_input.is_alive():
-            modules.run(screen1, player)
-
+    time.sleep(timer)
+    
     # Limpar display
-    #modules.run(screen1, player)
+    modules.run(screen1, player)
     modules.clear()
     score += 1
     

@@ -9,7 +9,7 @@ Este programa Python simula um ambiente de jogo simples onde um sprite jogador p
 ## Uso:
 Para executar o jogo, execute o script **game.py** usando Python. Certifique-se de ter o Python instalado no seu sistema.
 
-##Controles:
+## Controles:
 **Mover para a Esquerda:** Pressione a tecla 'a'.
 **Mover para a Direita:** Pressione a tecla 'd'.
 **Pular:** Pressione a tecla 'w'.
